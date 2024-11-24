@@ -1,0 +1,10 @@
+name: Enny Git Action
+run-name: Enny Git action
+on: [push]
+jobs:
+  simple_test_for_now
+    runs-on: ubuntu-latest
+    steps:
+      run: echo "hello everyone"
+      
+
