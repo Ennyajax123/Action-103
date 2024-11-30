@@ -8,8 +8,10 @@ jobs:
         - name: Echo hello world
           uses: Action/checkout@v4
           
-        - neme: Echo pwd
+        - name: welcome message
           run: echo "hello everyone"
+
+        - name: compute the environment 
           run: pwd
 
         - name: show the list
