@@ -5,6 +5,22 @@ jobs:
   simple_test_for_now:
     runs-on: ubuntu-latest
       steps:
-        run: echo "hello everyone"
+          run: echo "hello everyone"
+        
+        - name: checkout code from repo
+          uses: actions/checkout@v4
+
+        - name: Setup Terraform to implement cloud infra
+          uses: hashicorp/setup-terraform
+          with:
+            terraform_version: 1.3.0
+
+        - name: Terraform init
+           rub: terraform init
+
+        - name: Terraform plan
+           run: terraform plan
+          
+
       
 
