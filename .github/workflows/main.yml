@@ -4,7 +4,7 @@ on: [push]
 jobs:
   simple_test_for_now:
     runs-on: ubuntu-latest
-      steps:
+    steps:
         - name: Echo hello world
           uses: Action/checkout@v4
         - run: echo "hello everyone"
