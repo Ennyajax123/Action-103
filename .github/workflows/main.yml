@@ -7,9 +7,11 @@ jobs:
       steps:
         - name: Echo hello world
           uses: Action/checkout@v4
-        - run: echo "hello everyone"
-        - run: pwd
-        - run:
+        
+        - name: greeting
+          run: echo "hello everyone"
+          run: pwd
+          run:
       
       - name: Setup Terraform to implement cloud infra
         uses: hashicorp/setup-terraform@v2
