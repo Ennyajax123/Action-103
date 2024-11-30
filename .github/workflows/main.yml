@@ -6,9 +6,12 @@ jobs:
     runs-on: ubuntu-latest
       steps:
         - name: Echo hello world
-          run: echo "hello everyone"
+          uses: Action/checkout@v4
+        - run: echo "hello everyone"
+        - run: pwd
+        - run:
       
-        - name: checkout code from repo
+        - name: checkout code from repo2
           run: hashicorp/setup-terraform@v2
           with:
            terraform_version: 1.3.0
