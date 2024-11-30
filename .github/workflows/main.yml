@@ -7,9 +7,13 @@ jobs:
     steps:
         - name: Echo hello world
           uses: Action/checkout@v4
-        - run: echo "hello everyone"
-        - run: pwd
-        - run: ls
+          run: echo "hello everyone"
+
+        - neme: Echo pwd
+          run: pwd
+
+        - name: show the list
+          run: ls
       
         - name: checkout code from repo2
           run: hashicorp/setup-terraform@v2
