@@ -7,9 +7,9 @@ jobs:
     steps:
         - name: Echo hello world
           uses: Action/checkout@v4
-          run: echo "hello everyone"
-
+          
         - neme: Echo pwd
+          run: echo "hello everyone"
           run: pwd
 
         - name: show the list
