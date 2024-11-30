@@ -4,21 +4,21 @@ on: [push]
 jobs:
   simple_test_for_now:
     runs-on: ubuntu-latest
-      steps:
-        - name: Echo hello world
-          uses: Action/checkout@v4
-        - run: echo "hello everyone"
-        - run: pwd
-        - run:
+    steps:
+      - name: Echo hello world
+        uses: Action/checkout@v4
+       - run: echo "hello everyone"
+       - run: pwd
+       - run:
       
-        - name: checkout code from repo2
-          run: hashicorp/setup-terraform@v2
-          with:
+      - name: checkout code from repo2
+       - run: hashicorp/setup-terraform@v2
+         with:
            terraform_version: 1.3.0
 
-        - name: Terraform init
-          run: terraform init
+      - name: Terraform init
+        - run: terraform init
 
-        - name: terraform plan
-           run: terraform plan
+      - name: terraform plan
+        - run: terraform plan
 
