@@ -4,23 +4,25 @@ on: [push]
 jobs:
   simple_test_for_now:
     runs-on: ubuntu-latest
-      steps:
+    steps:
         - name: Echo hello world
           uses: Action/checkout@v4
         
         - name: greeting
           run: echo "hello everyone"
+
+        - name: welcome message
           run: pwd
-          run:
       
-      - name: Setup Terraform to implement cloud infra
-        uses: hashicorp/setup-terraform@v2
-         with:
+        - name: Setup Terraform to implement cloud infra
+          uses: hashicorp/setup-terraform@v2
+          with:
            terraform_version: 1.3.0
 
-      - name: Terraform init
-        run: terraform init
+        - name: Terraform init
+          run: terraform init
 
-        - name: terraform plan
-           run: terraform plan
+        - name: Terraform plan
+          run: terraform plan
 
+  
