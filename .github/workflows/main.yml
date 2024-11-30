@@ -9,7 +9,7 @@ jobs:
         uses: Action/checkout@v4
         run: echo "hello everyone"
         run: pwd
-        run:
+        run: ls
       
       - name: checkout code from repo2
         run: hashicorp/setup-terraform@v2
