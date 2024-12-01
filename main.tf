@@ -6,6 +6,6 @@ resource "aws_instance" "ec-creation" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Node -created-by-GitAction"
+    Name = "Node-created-by-GitAction"
   }
 }
